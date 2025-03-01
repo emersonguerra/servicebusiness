@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+{% block title %}{{ 'Editar' if colaborador else 'Adicionar' }} Colaborador{% endblock %}
+{% block content %}
+<h2>{{ 'Editar' if colaborador else 'Adicionar' }} Colaborador</h2>
+<form method="post">
+    <div class="form-group">
+        <label>Nome</label>
+        <input type="text" name="nome" class="form-control" value="{{ colaborador.nome if colaborador }}" required>
+    </div>
+    <div class="form-group">
+        <label>Email</label>
+        <input type="email" name="email" class="form-control" value="{{ colaborador.email if colaborador }}" required>
+    </div>
+    <div class="form-group">
+        <label>CPF</label>
+        <input type="text" name="cpf" class="form-control" value="{{ colaborador.cpf if colaborador }}" required>
+    </div>
+    <div class="form-group">
+        <label>Telefone</label>
+        <input type="text" name="telefone" class="form-control" value="{{ colaborador.telefone if colaborador }}" required>
+    </div>
+    <div class="form-group">
+        <label>Cargo</label>
+        <input type="text" name="cargo" class="form-control" value="{{ colaborador.cargo if colaborador }}" required>
+    </div>
+    <div class="form-group">
+        <label>Data de Admissão</label>
+        <input type="date" name="data_admissao" class="form-control" value="{{ colaborador.data_admissao if colaborador }}" required>
+    </div>
+    <div class="form-group">
+        <label>Salário</label>
+        <input type="number" step="0.01" name="salario" class="form-control" value="{{ colaborador.salario if colaborador }}" required>
+    </div>
+    <button type="submit" class="btn btn-primary">Salvar</button>
+    <a href="{{ url_for('colaborador.index') }}" class="btn btn-secondary">Cancelar</a>
+</form>
+{% endblock %}
+
