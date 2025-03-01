@@ -1,0 +1,10 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f8ff; /* fundo azul claro */
+}
+.navbar {
+    background-color: #007bff; /* azul predominante (primary) */
+}
+.navbar a {
+    color: #ffffff !important;
+}
