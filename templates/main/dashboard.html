@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block title %}Dashboard - Sistema de Finanças{% endblock %}
+{% block content %}
+<h1>Dashboard</h1>
+<p>Bem-vindo, {{ current_user.nome }}!</p>
+<hr>
+<h3>Entidades do Back-end</h3>
+<ul class="list-group">
+    {% for entidade in entidades %}
+    <li class="list-group-item">
+        <!-- Link de exemplo: você pode ajustar para direcionar para o blueprint correto -->
+        <a href="#">{{ entidade }}</a>
+    </li>
+    {% endfor %}
+</ul>
+{% endblock %}
