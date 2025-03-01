@@ -14,6 +14,11 @@
             <th>Cargo</th>
             <th>Data Admissão</th>
             <th>Salário</th>
+            <th>Tipo Colaborador</th>
+            <th>Data Criação</th>
+            <th>Data Exclusão</th>
+            <th>Projeto</th>
+            <th>Extensão Equipe</th>
             <th>Ações</th>
         </tr>
     </thead>
@@ -28,6 +33,11 @@
             <td>{{ colaborador.cargo }}</td>
             <td>{{ colaborador.data_admissao }}</td>
             <td>{{ colaborador.salario }}</td>
+            <td>{{ colaborador.tipo_colaborador }}</td>
+            <td>{{ colaborador.dtcreation }}</td>
+            <td>{{ colaborador.dtdeleted }}</td>
+            <td>{{ colaborador.projeto }}</td>
+            <td>{{ colaborador.extensao_equipe }}</td>
             <td>
                 <a href="{{ url_for('colaborador.edit', id=colaborador.id) }}" class="btn btn-warning btn-sm">Editar</a>
                 <a href="{{ url_for('colaborador.delete', id=colaborador.id) }}" class="btn btn-danger btn-sm" onclick="return confirm('Deseja excluir?')">Excluir</a>
