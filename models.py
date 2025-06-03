@@ -175,14 +175,14 @@ class ProjetosEsforco(db.Model):
 
 # ----------------- Entidade Usuário ----------------- 
 class Usuario(db.Model): 
-__tablename__ = 'usuarios' 
-id = db.Column(db.Integer, primary_key=True) 
-nome = db.Column(db.String(100), nullable=False) 
-email = db.Column(db.String(120), unique=True, nullable=False) 
-senha = db.Column(db.String(128), nullable=False) 
-# Armazene a senha já hasheada role = db.Column(db.String(50), default='usuario', nullable=False) 
-reset_token = db.Column(db.String(128), nullable=True) 
-dtcreation = db.Column(db.DateTime, default=db.func.current_timestamp())
+    __tablename__ = 'usuarios' 
+    id = db.Column(db.Integer, primary_key=True) 
+    nome = db.Column(db.String(100), nullable=False) 
+    email = db.Column(db.String(120), unique=True, nullable=False) 
+    senha = db.Column(db.String(128), nullable=False) 
+    # Armazene a senha já hasheada role = db.Column(db.String(50), default='usuario', nullable=False) 
+    reset_token = db.Column(db.String(128), nullable=True) 
+    dtcreation = db.Column(db.DateTime, default=db.func.current_timestamp())
 
 schema.py
 
