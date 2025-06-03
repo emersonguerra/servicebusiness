@@ -1,11 +1,11 @@
-modelos.py
+models.py
 
 from flask_sqlalchemy import SQLAlchemy
 from datetime import datetime
 
 db = SQLAlchemy()
 
-# ----------------- Modelos -----------------
+# ----------------- Models -----------------
 
 class TipoColaborador(db.Model):
     __tablename__ = 'tipo_colaborador'
