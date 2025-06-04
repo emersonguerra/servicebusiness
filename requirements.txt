@@ -3,3 +3,5 @@ Flask-Login
 Flask-SQLAlchemy
 gunicorn
 psycopg2-binary
+marshmallow==3.21.1
+Flask-marshmallow
