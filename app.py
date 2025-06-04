@@ -82,6 +82,12 @@ def create_app():
     # Blueprint Principal (dashboard, menu, etc.)
     from blueprints.main import main_bp
     app.register_blueprint(main_bp)
+
+    # banco criacao
+    @app.route('/initdb')
+    def initdb():
+        db.create_all()
+        return 'Tabelas criadas com sucesso!'
     
     return app
 
