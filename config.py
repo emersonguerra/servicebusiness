@@ -1,10 +1,13 @@
 import os
 
 class Config:
+  
+    
+    SQLALCHEMY_DATABASE_URI = os.environ.get("DATABASE_URL")
+    SQLALCHEMY_TRACK_MODIFICATIONS = False
     # Secret Key usada para sessão, login etc.
     SECRET_KEY = os.environ.get("SECRET_KEY", "OhblesqBom13$")
-
     # Usa o banco do Render (PostgreSQL) se estiver definido, senão usa SQLite local
-    SQLALCHEMY_DATABASE_URI = os.environ.get("DATABASE_URL", "sqlite:///finance.db")
+    #SQLALCHEMY_DATABASE_URI = os.environ.get("DATABASE_URL", "sqlite:///finance.db")
 
-    SQLALCHEMY_TRACK_MODIFICATIONS = False
+    #SQLALCHEMY_TRACK_MODIFICATIONS = False
