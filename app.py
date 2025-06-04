@@ -28,12 +28,12 @@ def create_app():
     app.register_blueprint(colaborador_bp, url_prefix='/colaborador')
     
     # 3. ColaboradorCentroCusto
-    from blueprints.colaborador_centrocusto import colaborador_centrocusto_bp
-    app.register_blueprint(colaborador_centrocusto_bp, url_prefix='/colaborador_centrocusto')
+    from blueprints.colaborador_centro_custo import colaborador_centro_custo_bp
+    app.register_blueprint(colaborador_centro_custo_bp, url_prefix='/colaborador_centro_custo')
     
     # 4. TipoCentroCusto
-    from blueprints.tipo_centrocusto import tipo_centrocusto_bp
-    app.register_blueprint(tipo_centrocusto_bp, url_prefix='/tipo_centrocusto')
+    from blueprints.tipo_centro_custo import tipo_centro_custo_bp
+    app.register_blueprint(tipo_centro_custo_bp, url_prefix='/tipo_centro_custo')
     
     # 5. CentroCusto
     from blueprints.centro_custo import centro_custo_bp
@@ -48,12 +48,12 @@ def create_app():
     app.register_blueprint(plano_contas_bp, url_prefix='/plano_contas')
     
     # 8. PlanoContasCentroCusto
-    from blueprints.plano_contas_centrocusto import plano_contas_centrocusto_bp
-    app.register_blueprint(plano_contas_centrocusto_bp, url_prefix='/plano_contas_centrocusto')
+    from blueprints.plano_contas_centro_custo import plano_contas_centro_custo_bp
+    app.register_blueprint(plano_contas_centro_custo_bp, url_prefix='/plano_contas_centro_custo')
     
     # 9. ProjetoCentroCustoIndiretos
-    from blueprints.projeto_centrocusto_indiretos import projeto_centrocusto_indiretos_bp
-    app.register_blueprint(projeto_centrocusto_indiretos_bp, url_prefix='/projeto_centrocusto_indiretos')
+    from blueprints.projeto_centro_custo_indiretos import projeto_centro_custo_indiretos_bp
+    app.register_blueprint(projeto_centro_custo_indiretos_bp, url_prefix='/projeto_centro_custo_indiretos')
     
     # 10. TipoProdutoServico
     from blueprints.tipo_produto_servico import tipo_produto_servico_bp
