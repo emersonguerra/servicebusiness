@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>{{ title }}</h2>
+<a href="{{ url_for('produto_servico.create') }}">Novo</a>
+<table>
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Campos</th>
+      <th>Ações</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for item in itens %}
+    <tr>
+      <td>{{ item.id }}</td>
+      <td>...</td>
+      <td>
+        <a href="{{ url_for('produto_servico.edit', id=item.id) }}">Editar</a>
+        <a href="{{ url_for('produto_servico.delete', id=item.id) }}">Excluir</a>
+      </td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+{% endblock %}
