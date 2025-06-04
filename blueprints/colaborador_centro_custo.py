@@ -1,6 +1,6 @@
 from flask import Blueprint, request, jsonify
 from models import db, ColaboradorCentroCusto
-from schema import ColaboradorCentroCustoSchema
+from schemas import ColaboradorCentroCustoSchema
 from datetime import datetime
 
 colaborador_centro_custo_bp = Blueprint('colaborador_centro_custo_bp', __name__)
