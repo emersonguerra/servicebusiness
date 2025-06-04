@@ -185,7 +185,7 @@ class Usuario(db.Model):
     reset_token = db.Column(db.String(128), nullable=True) 
     dtcreation = db.Column(db.DateTime, default=db.func.current_timestamp())
 
-schema.py
+
 
 from marshmallow import Schema, fields, validate
 
