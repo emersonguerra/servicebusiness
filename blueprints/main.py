@@ -6,7 +6,6 @@ main_bp = Blueprint('main', __name__, template_folder='main')
 @main_bp.route('/dashboard')
 @login_required
 def dashboard():
-    # Lista de entidades conforme seu back; adicione ou remova conforme necessário.
     entidades = [
         'Tipo Colaborador',
         'Colaborador',
