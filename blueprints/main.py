@@ -3,12 +3,14 @@ from flask_login import login_required, current_user
 
 main_bp = Blueprint('main', __name__, template_folder='main')
 
-@main_bp.route('/dashboard')
-@login_required
 @main_bp.route('/')
+@login_required
 def home_main():
     return render_template("home.html")
-def dashboard():
+
+@main_bp.route('/dashboard')
+@login_required
+def dashboard_main():
     entidades = [
         'Tipo Colaborador',
         'Colaborador',
