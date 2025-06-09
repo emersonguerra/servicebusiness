@@ -6,7 +6,7 @@ main_bp = Blueprint('main', __name__, template_folder='main')
 @main_bp.route('/dashboard')
 @login_required
 @main_bp.route('/')
-def home():
+def home_main():
     return render_template("home.html")
 def dashboard():
     entidades = [
