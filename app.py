@@ -1,6 +1,6 @@
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
-from flask_login import LoginManager
+# from flask_login import LoginManager
 from config import Config
 
 # Instância global do SQLAlchemy
@@ -14,8 +14,8 @@ def create_app():
     db.init_app(app)
     
     # Configuração do Flask-Login
-    login_manager = LoginManager(app)
-    login_manager.login_view = 'usuario.login'  # Ajuste conforme sua rota de login
+    # login_manager = LoginManager(app)
+    # login_manager.login_view = 'usuario.login'  # Ajuste conforme sua rota de login
     
     # Registro dos Blueprints para cada entidade
 
