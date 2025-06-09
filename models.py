@@ -31,10 +31,7 @@ class Colaborador(db.Model):
     dtdeleted = db.Column(db.DateTime, nullable=True)
     dtcreation = db.Column(db.DateTime, nullable=False, default=db.func.current_timestamp())
 
-    def __repr__(self):
-        return f"<Colaborador {self.nome}, Salario: {self.salario}>"
-
-
+    # Removido: duplicação de __repr__
 class ColaboradorCentroCusto(db.Model):
     __tablename__ = 'colaborador_centrocusto'
     id = db.Column(db.Integer, primary_key=True)

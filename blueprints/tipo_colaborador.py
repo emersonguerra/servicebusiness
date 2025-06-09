@@ -6,7 +6,7 @@ tipo_colaborador_bp = Blueprint('tipo_colaborador', __name__, template_folder='t
 @tipo_colaborador_bp.route('/')
 def index():
     tipos = TipoColaborador.query.all()
-    return render_template('tipo_colaborador/crud_tipo_colaborador.html', tipos_colaborador=tipos)
+    return render_template("crud_tipo_colaborador.html", tipos_colaborador=tipos)
 
 @tipo_colaborador_bp.route('/add', methods=['GET', 'POST'])
 def add():
@@ -25,7 +25,7 @@ def add():
         db.session.commit()
         flash('Tipo de Colaborador adicionado com sucesso!', 'success')
         return redirect(url_for('tipo_colaborador.index'))
-    return render_template('tipo_colaborador/form_tipo_colaborador.html', tipo=None)
+    return render_template("form_tipo_colaborador.html", tipo=None)
 
 @tipo_colaborador_bp.route('/edit/<int:id>', methods=['GET', 'POST'])
 def edit(id):
@@ -38,7 +38,7 @@ def edit(id):
         db.session.commit()
         flash('Tipo de Colaborador atualizado com sucesso!', 'success')
         return redirect(url_for('tipo_colaborador.index'))
-    return render_template('tipo_colaborador/form_tipo_colaborador.html', tipo=tipo)
+    return render_template("form_tipo_colaborador.html", tipo=tipo)
 
 @tipo_colaborador_bp.route('/delete/<int:id>')
 def delete(id):

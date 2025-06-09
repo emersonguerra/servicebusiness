@@ -7,7 +7,7 @@ main_bp = Blueprint('main', __name__, template_folder='main')
 @login_required
 @main_bp.route('/')
 def home():
-    return render_template('main/home.html')
+    return render_template("home.html")
 def dashboard():
     entidades = [
         'Tipo Colaborador',

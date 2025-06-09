@@ -962,7 +962,7 @@ def deletar_projetos_esforco(id):
 # -------------------------------------------------------------
 # 15. Usuário (Gerenciamento de Usuários)
 # -------------------------------------------------------------
-from flask_login import current_user
+# Removido import duplicado: from flask_login
 
 @app.route('/usuarios', methods=['GET'])
 @login_required
