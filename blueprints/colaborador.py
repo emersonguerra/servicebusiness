@@ -9,7 +9,7 @@ def index():
     return render_template("crud_colaborador.html", colaboradores=colaboradores)
 
 @colaborador_bp.route('/add', methods=['GET', 'POST'])
-def add_colaborador():
+def add():
     # Busca os tipos para preencher o select no formulário
     tipos = TipoColaborador.query.all()
     if request.method == 'POST':
@@ -47,7 +47,7 @@ def add_colaborador():
     return render_template("form_colaborador.html", colaborador=None, tipos_colaborador=tipos)
 
 @colaborador_bp.route('/edit/<int:id>', methods=['GET', 'POST'])
-def edit_colaborador(id):
+def edit(id):
     colaborador = Colaborador.query.get_or_404(id)
     tipos = TipoColaborador.query.all()
     if request.method == 'POST':
@@ -69,7 +69,7 @@ def edit_colaborador(id):
     return render_template("form_colaborador.html", colaborador=colaborador, tipos_colaborador=tipos)
 
 @colaborador_bp.route('/delete/<int:id>')
-def delete_colaborador(id):
+def delete(id):
     colaborador = Colaborador.query.get_or_404(id)
     db.session.delete(colaborador)
     db.session.commit()
