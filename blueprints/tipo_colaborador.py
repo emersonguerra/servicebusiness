@@ -11,14 +11,12 @@ def index():
 @tipo_colaborador_bp.route('/add', methods=['GET', 'POST'])
 def add():
     if request.method == 'POST':
-        nome = request.form.get('nome')
         descricao = request.form.get('descricao')
-        dtcreation = request.form.get('dtcreation')
+        status = request.form.get('status')
         dtdeleted = request.form.get('dtdeleted')
         novo = TipoColaborador(
-            nome=nome,
             descricao=descricao,
-            dtcreation=dtcreation,
+            status=status,
             dtdeleted=dtdeleted
         )
         db.session.add(novo)
