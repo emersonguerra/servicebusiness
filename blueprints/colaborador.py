@@ -4,7 +4,7 @@ from models import db, Colaborador, TipoColaborador
 colaborador_bp = Blueprint('colaborador', __name__, template_folder='colaborador')
 
 @colaborador_bp.route('/')
-def index_colaborador():
+def index():
     colaboradores = Colaborador.query.all()
     return render_template("crud_colaborador.html", colaboradores=colaboradores)
 
