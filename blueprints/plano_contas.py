@@ -7,6 +7,12 @@ plano_contas_bp = Blueprint('plano_contas_bp', __name__)
 schema = PlanoContasSchema()
 schema_many = PlanoContasSchema(many=True)
 
+@plano_contas_bp.route('/')
+def index():
+    planocontas = planocontas.query.all()
+    return render_template("crud_plano_contas.html", planocontas=planocontas)
+
+
 @plano_contas_bp.route('/plano_contas', methods=['GET'])
 def get_all_plano_contas():
     page = request.args.get('page', 1, type=int)
