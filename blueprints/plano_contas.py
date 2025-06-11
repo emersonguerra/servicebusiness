@@ -10,7 +10,7 @@ schema_many = PlanoContasSchema(many=True)
 @plano_contas_bp.route('/')
 def index():
     planocontas = planocontas.query.all()
-    return render_template("crud_plano_contas.html", planocontas=planocontas)
+    return render_template("crud_plano_contas.html", plano_contas=planocontas)
 
 
 @plano_contas_bp.route('/plano_contas', methods=['GET'])
