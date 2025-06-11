@@ -3,7 +3,7 @@ from models import db, PlanoContas
 from schemas import PlanoContasSchema
 from datetime import datetime
 
-plano_contas_bp = Blueprint('plano_contas_bp', __name__)
+plano_contas_bp = Blueprint('plano_contas', __name__, template_folder='plano_contas')
 schema = PlanoContasSchema()
 schema_many = PlanoContasSchema(many=True)
 
